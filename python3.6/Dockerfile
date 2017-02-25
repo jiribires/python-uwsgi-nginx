@@ -33,4 +33,6 @@ COPY conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY ./app /app
 WORKDIR /app
 
+EXPOSE 80 443
+
 CMD ["/usr/bin/supervisord"]
