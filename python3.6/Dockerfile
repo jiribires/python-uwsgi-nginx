@@ -33,7 +33,3 @@ COPY conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY ./app /app
 WORKDIR /app
 ENV PYTHONPATH=/app
-
-EXPOSE 80 443
-
-CMD ["/usr/bin/supervisord"]
