@@ -30,6 +30,9 @@ RUN apt-get update && apt-get install -y supervisor \
  && rm -rf /var/lib/apt/lists/*
 COPY conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
+COPY ./bin/wait-for-it.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/wait-for-it.sh
+
 COPY ./app /app
 WORKDIR /app
 ENV PYTHONPATH=/app
