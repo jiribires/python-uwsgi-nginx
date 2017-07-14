@@ -1,4 +1,4 @@
-FROM pypy:3.5
+FROM pypy:3-5
 
 MAINTAINER Jiri Bires <jiri.bires@ysoft.com>
 
